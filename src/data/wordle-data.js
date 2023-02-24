@@ -1,9 +1,9 @@
-import { readFileContents, writeFileContents, readlines } from "../utils/io"
-import errors from "../utils/cmdb-errors.mjs"
-import { play, guess } from "../model/wordle-game.js"
+import { readFileContents, writeFileContents, readlines } from "../utils/io.js"
+import errors from "../utils/errors.js"
+import { play } from "../model/wordle-game.js"
 
 async function getNewWord() {
-    const allWords = await readlines("../words.txt")
+    const allWords = await readlines("./db/words.txt")
     const word = allWords[Math.floor(Math.random() * allWords.length)]
     return word
 }
@@ -33,18 +33,20 @@ async function newGame() {
 
     await storeGame(game)
 
+    return game
 }
 
 async function storeGame(game, games) {
     if (!games) {
         games = await loadAllGames()
     }
+
     games.push(game)
-    await writeFileContents("../db/games.json", JSON.stringify(games))
+    await writeFileContents("./db/games.json", JSON.stringify(games, null, 2))
 }
 
 async function loadAllGames() {
-    const json = await readFileContents("../db/games.json")
+    const json = await readFileContents("./db/games.json")
     const games = await JSON.parse(json)
     return games
 }

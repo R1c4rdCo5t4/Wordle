@@ -30,6 +30,6 @@ export async function input(question) {
 }
 
 export async function readlines(path) {
-    const __dirname = url.fileURLToPath(new URL(path, import.meta.url))
-    return await readFileContents(__dirname, "utf-8").split("\r\n")
+    const contents = await readFileContents(path, "utf-8")
+    return contents.split("\r\n")
 }

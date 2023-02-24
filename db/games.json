@@ -1,0 +1,37 @@
+[
+  {
+    "id": 0,
+    "word": "ralph",
+    "guesses": 6,
+    "guessedWords": [],
+    "isOver": false
+  },
+  {
+    "id": 1,
+    "word": "plied",
+    "guesses": 6,
+    "guessedWords": [],
+    "isOver": false
+  },
+  {
+    "id": 2,
+    "word": "lower",
+    "guesses": 6,
+    "guessedWords": [],
+    "isOver": false
+  },
+  {
+    "id": 3,
+    "word": "harry",
+    "guesses": 6,
+    "guessedWords": [],
+    "isOver": false
+  },
+  {
+    "id": 4,
+    "word": "genre",
+    "guesses": 6,
+    "guessedWords": [],
+    "isOver": false
+  }
+]

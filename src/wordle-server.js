@@ -1,13 +1,21 @@
+import apiInit from './web/api/wordle-api.js'
+import data from './data/wordle-data.js'
 import express from 'express'
+import url from 'url'
+import path from 'path'
+
+
+const api = apiInit(data)
 
 const app = express()
-const PORT = 8080
+const port = 8080
+
 
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
 
 app.use('/api', api)
-app.use('/', site)
+// app.use('/', site)
 
 const __dirname = url.fileURLToPath(new URL('.', import.meta.url))
 app.set('view engine', 'hbs')
@@ -17,4 +25,4 @@ app.use((req, rsp) => {
     rsp.status(404).render('notfound')
 })
 
-app.listen(PORT, () => console.log(`Server listening in http://localhost:${PORT}`))
+app.listen(port, () => console.log(`Server listening in http://localhost:${port}`))

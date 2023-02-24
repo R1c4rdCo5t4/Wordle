@@ -1,17 +1,17 @@
 import express from 'express'
 import errors from '../../utils/errors.js'
-import data from '../../data/wordle-data.js'
+// import data from '../../data/wordle-data.js'
 
-export default function (db) {
+export default function (data) {
 
-    if (!db) {
+    if (!data) {
         throw errors.INVALID_PARAMETER('db')
     }
 
     async function newGame(req, rsp) {
         try {
-            const result = await data.newGame()
-            rsp.json(result)
+            const game = await data.newGame()
+            rsp.json(game)
         }
         catch (e) {
             rsp.status(500).json({ error: e.message })
@@ -44,7 +44,8 @@ export default function (db) {
 
     const router = express.Router()
     router.use(express.urlencoded({ extended: true }))
-    router.get('/play', newGame)
+
+    router.post('/play', newGame)
     router.get('/play/:gameId', getGame)
     router.post('/play/:gameId', playGame)
 
