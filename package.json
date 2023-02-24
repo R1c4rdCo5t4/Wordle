@@ -5,10 +5,11 @@
   "main": "main.js",
   "dependencies": {
     "fs": "^0.0.1-security",
+    "openai": "^3.1.0",
     "readline": "^1.3.0"
   },
-  "devDependencies": {},
   "scripts": {
+    "start": "node src/main.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -25,5 +26,4 @@
   },
   "homepage": "https://github.com/R1c4rdCo5t4/Wordle-Game#readme",
   "type": "module"
-
 }
