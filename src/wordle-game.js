@@ -41,16 +41,8 @@ export class WordleGame {
 		return word == this.currentWord
 	}
     
-    async play() {
+    async play(guess) {
  
-        console.log(`You have ${this.guesses} guesses left.`)
-        let guess = await input("Enter a word: ")
-
-        while (!guess || guess.length != 5) {
-            console.log("Please enter a five letter word.")
-            guess = await input("Enter a word: ")
-        }
-
         if (this.guess(guess)) {
             console.log("You guessed the word!")
             this.isOver = true
@@ -59,7 +51,9 @@ export class WordleGame {
             wordHint(guess, this.currentWord)
             console.log("Incorrect guess.")
             this.guessedWords.push(guess)
-        }
+		}
+		
+		console.log(`You have ${this.guesses} guesses left.`)
     }
 }
 
