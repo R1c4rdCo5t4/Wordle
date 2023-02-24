@@ -1,5 +1,5 @@
-import { WordleGame } from './wordle-game.js'
-import { input } from './utils.js'
+import { WordleGame } from './model/wordle-game.js'
+import { input } from './utils/colors.js'
 
 
 let game = new WordleGame()
@@ -19,6 +19,6 @@ while (!game.isOver && game.guesses > 0) {
 	await game.play(guess)
 }
 
-console.log(`The word was: ${game.currentWord}`)
+console.log(`The word was: ${game.correctWord}`)
 
 
