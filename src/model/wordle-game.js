@@ -17,22 +17,26 @@ function wordHint(guessWord, correctWord) {
 	console.log(output)
 }
 
-function newGuess(word, game) {
-	game.guesses--
-	return word == game.correctWord
-}
-
 export async function play(guess, game) {
 
-	if (newGuess(guess)) {
+	wordHint(guess, game.word)
+	if (guess == game.word) {
 		console.log("You guessed the word!")
 		game.isOver = true
+		return game
 	}
-
-	wordHint(guess, game.correctWord)
+	
 	console.log("Incorrect guess.")
+	game.guesses--
 	game.guessedWords.push(guess)
-	console.log(`You have ${game.guesses} guesses left.`)
+	
+	if (game.guesses == 0) {
+		console.log("You are out of guesses.")
+		game.isOver = true
+	}
+	else {
+		console.log(`You have ${game.guesses} guesses left.`)
+	}
 	return game
 
 }

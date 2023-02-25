@@ -9,13 +9,17 @@ async function getNewWord() {
 }
 
 
-async function newPlay(guess, gameId) {
+async function playGame(guess, gameId) {
+
     const games = await loadAllGames()
     const game = games[gameId]
+
     if (!game) {
         throw errors.INVALID_PARAMETER('gameId')
     }
-    const result = await play(guess)
+
+    const result = await play(guess, game)
+    storeGame(result, games, gameId)
     return result
 }
 
@@ -36,14 +40,23 @@ async function newGame() {
     return game
 }
 
-async function storeGame(game, games) {
+async function storeGame(game, games, gameId) {
     if (!games) {
         games = await loadAllGames()
     }
 
-    games.push(game)
+    if (!gameId) {
+        games.push(game)
+    }
+    else {
+        games[gameId] = game
+    }
+
+    
     await writeFileContents("./db/games.json", JSON.stringify(games, null, 2))
 }
+
+
 
 async function loadAllGames() {
     const json = await readFileContents("./db/games.json")
@@ -63,7 +76,7 @@ async function getGame(gameId) {
 
 export default {
     newGame,
-    newPlay,
+    playGame,
     getGame
 
 }

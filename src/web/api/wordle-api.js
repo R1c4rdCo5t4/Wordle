@@ -1,6 +1,6 @@
 import express from 'express'
 import errors from '../../utils/errors.js'
-// import data from '../../data/wordle-data.js'
+
 
 export default function (data) {
 
@@ -30,11 +30,11 @@ export default function (data) {
 
     async function playGame(req, rsp) {
         try {
-            const { word } = req.body
-            if (!word) {
-                throw errors.INVALID_PARAMETER('word')
+            const { guess } = req.body
+            if (!guess) {
+                throw errors.INVALID_PARAMETER('guess')
             }
-            const result = await data.playGame(word, req.params.gameId)
+            const result = await data.playGame(guess, req.params.gameId)
             rsp.json(result)
         }
         catch (e) {
@@ -45,7 +45,7 @@ export default function (data) {
     const router = express.Router()
     router.use(express.urlencoded({ extended: true }))
 
-    router.post('/play', newGame)
+    router.get('/play', newGame)
     router.get('/play/:gameId', getGame)
     router.post('/play/:gameId', playGame)
 
