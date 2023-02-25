@@ -29,13 +29,9 @@ function writeWord(guesses, isOver) {
 	const guessWord = document.getElementById('guessWord')
 
 	document.addEventListener('DOMContentLoaded', () => {
-		console.log(`word-${idx}`)
 		const typingWord = document.getElementById(`word-${idx}`)
-
-		
 		
 		document.addEventListener('keydown', (event) => {
-		
 			if (event.key === 'Enter') {
 				guessWord.value = word
 				document.getElementById('onPlayButton').click()
