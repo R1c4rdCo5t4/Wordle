@@ -9,27 +9,39 @@
 </head>
 <body>
   <div class="word">
+    <div class="word-header">
+      <h1>Wordle</h1>
+    </div>
     <div class="word-stats">
         <div class="guesses">
-            {{guesses}}
+            Number of guesses: {{guesses}}
         </div>
     </div>
     <div class="word-container">
       <div class="guess-letters">
-          {{#each guessedWords}}
-            <p>{{this}}</p>
-          {{/each}}
+        {{#each guessedWords}}
+          <div class="guess-letters-container" id={{@index}}>
+            {{#each this}}
+              <a class="letters-item" style="color:{{this}}">{{@key}}</a>
+            {{/each}}
+          </div>
+        {{/each}}
       </div>
     </div>
     <div class="word-guess-area">
+      <form action="/play" method="GET">
+          <input type="submit" value="New Game" id="button">
+      </form>
       <form action="/play/{{id}}" method="POST">
         <label for="word-guess">
-          Word
-          <input type="text" name="guess">
-          <input type="submit" value="Try"/>
+          <input type="text" placeholder="..." name="guess" id="textBox">
+          <input type="submit" value="Try" id="button">
         </label>
       </form>
     </div>
   </div>
+  <script>
+    
+  </script>
 </body>
 </html>

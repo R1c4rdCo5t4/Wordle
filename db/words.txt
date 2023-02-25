@@ -571,6 +571,7 @@ mocha
 deter
 study
 lover
+blitz
 safer
 rivet
 funny
@@ -1400,7 +1401,6 @@ novel
 waxen
 stoic
 jerky
-blitz
 beefy
 lyric
 hussy
