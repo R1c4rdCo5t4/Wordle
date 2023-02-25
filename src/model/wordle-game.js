@@ -1,5 +1,10 @@
-import { colors } from '../utils/colors.js'
 
+
+const colors = {
+	green: '#338f28',
+	yellow: '#cfcf00',
+	gray: '##dcdcdc8f',
+}
 
 
 function wordHint(guessWord, correctWord) {
@@ -13,9 +18,9 @@ function wordHint(guessWord, correctWord) {
 		const guessWUpper = guessWord[i].toUpperCase() 
 		let color
 		switch(true) {
-			case guessWLower == correctWord[i]: color = colors.green; break;
-			case correctWord.includes(guessWLower): color = colors.yellow; break;
-			default: color = colors.red;
+			case guessWLower == correctWord[i]: color = colors.green; break
+			case correctWord.includes(guessWLower): color = colors.yellow; break
+			default: color = colors.gray
 		}
 		pairs.push({letter: guessWUpper, color: color})
 

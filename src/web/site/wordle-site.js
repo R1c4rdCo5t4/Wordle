@@ -23,7 +23,7 @@ export default function () {
 
     function fillWords(game) {
         const copy = { ...game }
-        const obj = Array(5).fill({ color: 'gray', letter: '_' }).map(x => ({ ...x }))
+        const obj = Array(5).fill({ color: '#6565658f', letter: '_' }).map(x => ({ ...x }))
         while (copy.guessedWords.length < 6) copy.guessedWords.push(obj)
         return copy
     }
@@ -34,7 +34,7 @@ export default function () {
         if (result.ok) {
             const game = await result.json()
             const copy = fillWords(game)
-            rsp.render('game', copy)
+            rsp.render('layout', copy)
         }
         else {
             rsp.status(500).json({ error: result.statusText })
@@ -58,7 +58,7 @@ export default function () {
             const json = await result.json()
             if (result.ok) {
                 const copy = fillWords(json)
-                rsp.render('game', copy)
+                rsp.render('layout', copy)
             } else {
                 rsp.status(500).json(json)
             }

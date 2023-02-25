@@ -12,7 +12,6 @@
   <div class="word">
     <div class="word-header">
       <a href="/play"><h1>Wordle</h1></a>
-      <br><br>
     </div>
     
     <div class="word-container">
@@ -25,28 +24,21 @@
               {{/each}}
             </div>
           {{/each}}
-          
-        {{!-- {{#each guessedWords}}
-            {{#each this}}
-                <a class="letters-item" style="background-color:{{this.color}}">{{this.letter}}</a>
-            {{/each}}
-        {{/each}} --}}
-       
       </div>
     </div>
     <div class="word-stats">
-        <div class="guesses">
+        {{!-- <div class="guesses">
             Number of guesses: {{guesses}}
-        </div>
-        <div>
-            {{#if isOver}}
-                {{#if won}}
-                    <h1>You won!</h1>
-                {{else}}
-                    <h1>You lost!</h1>
-                {{/if}}
+        </div> --}}
+        
+        {{#if isOver}}
+            {{#if won}}
+                <h1>You won!</h1>
+            {{else}}
+                <h1>You lost!</h1>
             {{/if}}
-        </div>
+        {{/if}}
+        
     </div>
     <div class="word-guess-area">
       <span id="guessWord" value="" hidden></span>

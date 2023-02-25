@@ -23,7 +23,6 @@ async function onPlay(gameId) {
 
 }
 
-
 function writeWord(guesses, isOver) {
 	const idx = 6 - guesses
 	const guessWord = document.getElementById('guessWord')
@@ -32,28 +31,36 @@ function writeWord(guesses, isOver) {
 		const typingWord = document.getElementById(`word-${idx}`)
 		
 		document.addEventListener('keydown', (event) => {
-			if (event.key === 'Enter') {
-				guessWord.value = word
-				document.getElementById('onPlayButton').click()
-				return
-			}
-			
-			if (event.key === 'Backspace') {
-				word = word.slice(0, word.length - 1)
-				let i
-				for (i = 0; i < word.length; i++) {
-					typingWord.children[i].textContent = word[i].toUpperCase()
-				}
-				while (i < 5) typingWord.children[i++].textContent = '_'
-				return
-			}
+			const tile = typingWord.children[word.length]
 
-			const letter = event.key.toLowerCase()
-			if (letter.length == 1 && letter >= 'a' && letter <= 'z' && letter != ' ' && word.length < 5 && !isOver) {
-				word += letter			
-				for (let i = 0; i < word.length; i++) {
-					typingWord.children[i].textContent = word[i].toUpperCase()
-				}
+			switch (event.key) {
+				case 'Enter':
+					guessWord.value = word
+					document.getElementById('onPlayButton').click()
+					break
+				
+				case 'Backspace':
+					if (word.length <= 0) break
+					
+					const prev = typingWord.children[word.length - 1]
+					if (prev.textContent == '_') prev.style.background = '#6565658f'
+					else prev.textContent = '_'
+
+					word = word.slice(0, word.length - 1)
+					break
+
+				case ' ':
+					word += '_'
+					tile.textContent = '_'
+					tile.style.background = '#dcdcdc8f'
+					break
+				
+				default:
+					const letter = event.key.toLowerCase()
+					if (letter.length == 1 && letter >= 'a' && letter <= 'z' && letter != ' ' && word.length < 5 && !isOver) {
+						word += letter
+						tile.textContent = letter.toUpperCase()
+					}
 			}
 		})
 	})

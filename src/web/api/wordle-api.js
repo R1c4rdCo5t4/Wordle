@@ -34,7 +34,7 @@ export default function (data) {
             if (!guess) {
                 throw errors.INVALID_PARAMETER('guess')
             }
-            const result = await data.playGame(guess, req.params.gameId)
+            result = await data.playGame(guess, req.params.gameId)
             rsp.json(result)
         }
         catch (e) {

@@ -2,8 +2,13 @@ import { readFileContents, writeFileContents, readlines } from "../utils/io.js"
 import errors from "../utils/errors.js"
 import { play } from "../model/wordle-game.js"
 
+
+async function getAllWords() {
+    return await readlines("./db/words.txt")
+}
+
 async function getNewWord() {
-    const allWords = await readlines("./db/words.txt")
+    const allWords = await getAllWords()
     const word = allWords[Math.floor(Math.random() * allWords.length)]
     return word
 }
@@ -13,13 +18,13 @@ async function playGame(guess, gameId) {
 
     const games = await loadAllGames()
     const game = games[gameId]
+    const words = await getAllWords()
 
-    if (!game) {
-        throw errors.INVALID_PARAMETER('gameId')
-    }
+    if (!game || game.isOver) throw errors.INVALID_PARAMETER('gameId')
+    if (!guess) throw errors.INVALID_PARAMETER('guess')
 
-    const result = await play(guess, game)
-    storeGame(result, games, gameId)
+    const result = words.includes(guess) ? await play(guess, game) : game
+    await storeGame(result, games, gameId)
     return result
 }
 
@@ -42,17 +47,9 @@ async function newGame() {
 }
 
 async function storeGame(game, games, gameId) {
-    if (!games) {
-        games = await loadAllGames()
-    }
-
-    if (!gameId) {
-        games.push(game)
-    }
-    else {
-        games[gameId] = game
-    }
-
+    if (!games) games = await loadAllGames()
+    if (!gameId) games.push(game)
+    else games[gameId] = game
     
     await writeFileContents("./db/games.json", JSON.stringify(games, null, 2))
 }
@@ -79,5 +76,4 @@ export default {
     newGame,
     playGame,
     getGame
-
 }

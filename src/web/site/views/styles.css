@@ -35,7 +35,7 @@
 }
 
 .word-stats {
-    padding: 2rem;
+    padding: 1rem;
 }
 
 .guess-letters {
@@ -48,19 +48,21 @@
 }
 
 .letters-item {
-    background-color: gray;
-    padding-left: .5rem;
-    padding-right: .5rem;
-    border-radius: 4px;
-    font-size:  8vh;
+    background-color: #6565658f;
+    padding-left: 2vh;
+    padding-right: 2vh;
+    border-radius: 2px;
+    font-size: 8vh;
+    margin-left: -0.5vh;
+    margin-right: -0.5vh;
 }
 
 .word-container :first-child {
-    margin-top: .2rem;
+    margin-top: 6vh;
 }
 
 .word-container :last-child {
-    margin-bottom: .2rem;
+    margin-bottom: 1vh;
 }
 
 .word-container {
@@ -70,34 +72,3 @@
     border-radius: 10px;
 }
 
-.word-guess-area {
-    display: flex;
-    justify-content: space-between;
-    margin: 1rem;
-    flex-direction: row;
-    font-size: medium;
-}
-
-.word-guess-area #textBox {
-    background-color: rgba(128, 128, 128, 0.63);
-    border-radius: 100px;
-    padding: 1rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    border-style: none;
-}
-
-.word-guess-area #buttonNewGame, #buttonSubmit  {
-    background-color: grey;
-    border-radius: 100px;
-    padding: 1rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    font-size: xx-large;
-    border-style: none;
-    transition: .3s ease-in-out;
-}
-
-.word-guess-area #buttonNewGame:hover, #buttonSubmit:hover {
-    background-color: rgba(128, 128, 128, 0.603);
-}
