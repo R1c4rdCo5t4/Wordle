@@ -32,7 +32,8 @@ async function newGame() {
         word: await getNewWord(),
         guesses: 6,
         guessedWords: [],
-        isOver: false
+        isOver: false,
+        won: false
     }
 
     await storeGame(game)

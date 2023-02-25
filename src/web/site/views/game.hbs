@@ -5,43 +5,111 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="/styles.css">
+    <script type="text/javascript" src="/client.js"></script>
   <title>Wordle</title>
 </head>
 <body>
   <div class="word">
     <div class="word-header">
-      <h1>Wordle</h1>
+      <a href="/play"><h1>Wordle</h1></a>
+      <br><br>
+    </div>
+    
+    <div class="word-container">
+      <div class="guess-letters">
+       
+          {{#each guessedWords}}
+            <div class="guess-letters-container" id='word-{{@index}}'>
+              {{#each this}}
+                <a class="letters-item" style="background-color:{{this.color}}">{{this.letter}}</a>
+              {{/each}}
+            </div>
+          {{/each}}
+          
+        {{!-- {{#each guessedWords}}
+            {{#each this}}
+                <a class="letters-item" style="background-color:{{this.color}}">{{this.letter}}</a>
+            {{/each}}
+        {{/each}} --}}
+       
+      </div>
     </div>
     <div class="word-stats">
         <div class="guesses">
             Number of guesses: {{guesses}}
         </div>
-    </div>
-    <div class="word-container">
-      <div class="guess-letters">
-        {{#each guessedWords}}
-          <div class="guess-letters-container" id={{@index}}>
-            {{#each this}}
-              <a class="letters-item" style="color:{{this}}">{{@key}}</a>
-            {{/each}}
-          </div>
-        {{/each}}
-      </div>
+        <div>
+            {{#if isOver}}
+                {{#if won}}
+                    <h1>You won!</h1>
+                {{else}}
+                    <h1>You lost!</h1>
+                {{/if}}
+            {{/if}}
+        </div>
     </div>
     <div class="word-guess-area">
-      <form action="/play" method="GET">
-          <input type="submit" value="New Game" id="button">
-      </form>
-      <form action="/play/{{id}}" method="POST">
-        <label for="word-guess">
-          <input type="text" placeholder="..." name="guess" id="textBox">
-          <input type="submit" value="Try" id="button">
-        </label>
-      </form>
+      <span id="guessWord" value="" hidden></span>
+      <button id="onPlayButton" onclick="onPlay({{id}})"></button>
     </div>
   </div>
   <script>
-    
+    writeWord({{guesses}}, {{isOver}})
   </script>
+
 </body>
 </html>
+
+
+
+
+
+
+
+
+{{!-- 
+
+
+
+ <div class="guess-letters-row" id="row-1">
+          <a class="letters-item" style="background-color:{{this.color}}" id="letter1"></a>
+          <a class="letters-item" style="background-color:{{this.color}}" id="letter2"></a>
+          <a class="letters-item" style="background-color:{{this.color}}" id="letter3"></a>
+          <a class="letters-item" style="background-color:{{this.color}}" id="letter4"></a>
+          <a class="letters-item" style="background-color:{{this.color}}" id="letter5"></a>
+        </div>
+        <div class="guess-letters-row" id="row-2">
+          <a class="letters-item" style="background-color:{{this.color}}" id="letter1"></a>
+          <a class="letters-item" style="background-color:{{this.color}}" id="letter2"></a>
+          <a class="letters-item" style="background-color:{{this.color}}" id="letter3"></a>
+          <a class="letters-item" style="background-color:{{this.color}}" id="letter4"></a>
+          <a class="letters-item" style="background-color:{{this.color}}" id="letter5"></a>
+        </div>
+        <div class="guess-letters-row" id="row-3">
+          <a class="letters-item" style="background-color:{{this.color}}" id="letter1"></a>
+          <a class="letters-item" style="background-color:{{this.color}}" id="letter2"></a>
+          <a class="letters-item" style="background-color:{{this.color}}" id="letter3"></a>
+          <a class="letters-item" style="background-color:{{this.color}}" id="letter4"></a>
+          <a class="letters-item" style="background-color:{{this.color}}" id="letter5"></a>
+        </div>
+        <div class="guess-letters-row" id="row-4">
+          <a class="letters-item" style="background-color:{{this.color}}" id="letter1"></a>
+          <a class="letters-item" style="background-color:{{this.color}}" id="letter2"></a>
+          <a class="letters-item" style="background-color:{{this.color}}" id="letter3"></a>
+          <a class="letters-item" style="background-color:{{this.color}}" id="letter4"></a>
+          <a class="letters-item" style="background-color:{{this.color}}" id="letter5"></a>
+        </div>
+        <div class="guess-letters-row" id="row-5">
+          <a class="letters-item" style="background-color:{{this.color}}" id="letter1"></a>
+          <a class="letters-item" style="background-color:{{this.color}}" id="letter2"></a>
+          <a class="letters-item" style="background-color:{{this.color}}" id="letter3"></a>
+          <a class="letters-item" style="background-color:{{this.color}}" id="letter4"></a>
+          <a class="letters-item" style="background-color:{{this.color}}" id="letter5"></a>
+        </div>
+        <div class="guess-letters-row" id="row-6">
+          <a class="letters-item" style="background-color:{{this.color}}" id="letter1"></a>
+          <a class="letters-item" style="background-color:{{this.color}}" id="letter2"></a>
+          <a class="letters-item" style="background-color:{{this.color}}" id="letter3"></a>
+          <a class="letters-item" style="background-color:{{this.color}}" id="letter4"></a>
+          <a class="letters-item" style="background-color:{{this.color}}" id="letter5"></a>
+        </div> --}}

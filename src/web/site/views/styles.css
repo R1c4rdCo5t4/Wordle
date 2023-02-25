@@ -22,7 +22,7 @@
 
 * {
     font-family: 'VT323', monospace;
-    background-color: rgb(114, 20, 98);
+    background-color: black;
     color:white;
     margin: 0;
     text-align: center;
@@ -48,10 +48,11 @@
 }
 
 .letters-item {
-    background-color: rgb(93, 93, 184);
+    background-color: gray;
     padding-left: .5rem;
     padding-right: .5rem;
     border-radius: 4px;
+    font-size:  8vh;
 }
 
 .word-container :first-child {
@@ -86,7 +87,7 @@
     border-style: none;
 }
 
-.word-guess-area #button {
+.word-guess-area #buttonNewGame, #buttonSubmit  {
     background-color: grey;
     border-radius: 100px;
     padding: 1rem;
@@ -97,6 +98,6 @@
     transition: .3s ease-in-out;
 }
 
-.word-guess-area #button:hover {
+.word-guess-area #buttonNewGame:hover, #buttonSubmit:hover {
     background-color: rgba(128, 128, 128, 0.603);
 }

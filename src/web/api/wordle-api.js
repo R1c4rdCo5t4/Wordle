@@ -5,7 +5,7 @@ import errors from '../../utils/errors.js'
 export default function (data) {
 
     if (!data) {
-        throw errors.INVALID_PARAMETER('db')
+        throw errors.INVALID_PARAMETER('data')
     }
 
     async function newGame(req, rsp) {
@@ -47,7 +47,7 @@ export default function (data) {
 
     router.get('/play', newGame)
     router.get('/play/:gameId', getGame)
-    router.post('/play/:gameId', playGame)
+    router.put('/play/:gameId', playGame)
 
     return router
 }

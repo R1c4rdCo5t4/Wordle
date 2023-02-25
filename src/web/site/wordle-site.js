@@ -1,6 +1,7 @@
 import express from 'express'
 import fetch from 'node-fetch'
 import url from 'url'
+import errors from '../../utils/errors.js'
 
 const __dirname = url.fileURLToPath(new URL('.', import.meta.url))
 
@@ -20,12 +21,20 @@ export default function () {
         
     }
 
+    function fillWords(game) {
+        const copy = { ...game }
+        const obj = Array(5).fill({ color: 'gray', letter: '_' }).map(x => ({ ...x }))
+        while (copy.guessedWords.length < 6) copy.guessedWords.push(obj)
+        return copy
+    }
+
     async function getGame(req, rsp) {
         const result = await fetch(baseURL + '/play/' + req.params.gameId)
 
         if (result.ok) {
             const game = await result.json()
-            rsp.render('game', game)
+            const copy = fillWords(game)
+            rsp.render('game', copy)
         }
         else {
             rsp.status(500).json({ error: result.statusText })
@@ -38,28 +47,35 @@ export default function () {
         if (!guess) {
             throw errors.INVALID_PARAMETER('guess')
         }
-        const result = await fetch(baseURL + '/play/' + req.params.gameId, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({ guess })
-        })
-        const json = await result.json()
-        if (result.ok) {
-            rsp.render('game', json)
+        try {
+            const result = await fetch(baseURL + '/play/' + req.params.gameId, {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ guess:guess })
+            })
+            const json = await result.json()
+            if (result.ok) {
+                const copy = fillWords(json)
+                rsp.render('game', copy)
+            } else {
+                rsp.status(500).json(json)
+            }
         }
-        else {
-            rsp.status(500).json(json)
+        catch(err) {
+            rsp.status(500).json({ error: err.message })
         }
     }
 
     const router = express.Router()
     router.use(express.urlencoded({ extended: true }))
     router.get('/styles.css', (req, rsp) => rsp.sendFile(__dirname + '/views/styles.css', rsp))
+    router.get('/client.js', (req, rsp) => rsp.sendFile(__dirname + '/client.js', rsp))
     router.get('/play', newGame)
     router.get('/play/:gameId', getGame)
-    router.post('/play/:gameId', playGame)
+    router.put('/play/:gameId', playGame)
+    router.get('/', (req, rsp) => rsp.redirect('/play'))
     
     return router
 }

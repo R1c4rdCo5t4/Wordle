@@ -1,2 +1,646 @@
 [
+  {
+    "id": 0,
+    "word": "cameo",
+    "guesses": 4,
+    "guessedWords": [
+      [
+        {
+          "letter": "A",
+          "color": "yellow"
+        },
+        {
+          "letter": "E",
+          "color": "yellow"
+        },
+        {
+          "letter": "I",
+          "color": "red"
+        },
+        {
+          "letter": "O",
+          "color": "yellow"
+        },
+        {
+          "letter": "U",
+          "color": "red"
+        }
+      ],
+      [
+        {
+          "letter": "H",
+          "color": "red"
+        },
+        {
+          "letter": "E",
+          "color": "yellow"
+        },
+        {
+          "letter": "A",
+          "color": "yellow"
+        },
+        {
+          "letter": "R",
+          "color": "red"
+        },
+        {
+          "letter": "D",
+          "color": "red"
+        }
+      ]
+    ],
+    "isOver": false,
+    "won": false
+  },
+  {
+    "id": 1,
+    "word": "teach",
+    "guesses": 0,
+    "guessedWords": [
+      [
+        {
+          "letter": "A",
+          "color": "yellow"
+        },
+        {
+          "letter": "S",
+          "color": "red"
+        },
+        {
+          "letter": "D",
+          "color": "red"
+        },
+        {
+          "letter": "A",
+          "color": "yellow"
+        },
+        {
+          "letter": "S",
+          "color": "red"
+        }
+      ],
+      [
+        {
+          "letter": "A",
+          "color": "yellow"
+        },
+        {
+          "letter": "S",
+          "color": "red"
+        },
+        {
+          "letter": "D",
+          "color": "red"
+        },
+        {
+          "letter": "A",
+          "color": "yellow"
+        },
+        {
+          "letter": "S",
+          "color": "red"
+        }
+      ],
+      [
+        {
+          "letter": "A",
+          "color": "yellow"
+        },
+        {
+          "letter": "S",
+          "color": "red"
+        },
+        {
+          "letter": "D",
+          "color": "red"
+        },
+        {
+          "letter": "A",
+          "color": "yellow"
+        },
+        {
+          "letter": "S",
+          "color": "red"
+        }
+      ],
+      [
+        {
+          "letter": "A",
+          "color": "yellow"
+        },
+        {
+          "letter": "S",
+          "color": "red"
+        },
+        {
+          "letter": "D",
+          "color": "red"
+        },
+        {
+          "letter": "A",
+          "color": "yellow"
+        },
+        {
+          "letter": "S",
+          "color": "red"
+        }
+      ],
+      [
+        {
+          "letter": "A",
+          "color": "yellow"
+        },
+        {
+          "letter": "S",
+          "color": "red"
+        },
+        {
+          "letter": "D",
+          "color": "red"
+        },
+        {
+          "letter": "A",
+          "color": "yellow"
+        },
+        {
+          "letter": "S",
+          "color": "red"
+        }
+      ],
+      [
+        {
+          "letter": "A",
+          "color": "yellow"
+        },
+        {
+          "letter": "S",
+          "color": "red"
+        },
+        {
+          "letter": "D",
+          "color": "red"
+        },
+        {
+          "letter": "A",
+          "color": "yellow"
+        },
+        {
+          "letter": "S",
+          "color": "red"
+        }
+      ]
+    ],
+    "isOver": true,
+    "won": false
+  },
+  {
+    "id": 2,
+    "word": "godly",
+    "guesses": 3,
+    "guessedWords": [
+      [
+        {
+          "letter": "A",
+          "color": "red"
+        },
+        {
+          "letter": "E",
+          "color": "red"
+        },
+        {
+          "letter": "I",
+          "color": "red"
+        },
+        {
+          "letter": "O",
+          "color": "yellow"
+        },
+        {
+          "letter": "U",
+          "color": "red"
+        }
+      ],
+      [
+        {
+          "letter": "L",
+          "color": "yellow"
+        },
+        {
+          "letter": "O",
+          "color": "green"
+        },
+        {
+          "letter": "S",
+          "color": "red"
+        },
+        {
+          "letter": "T",
+          "color": "red"
+        },
+        {
+          "letter": "Y",
+          "color": "green"
+        }
+      ],
+      [
+        {
+          "letter": "G",
+          "color": "green"
+        },
+        {
+          "letter": "O",
+          "color": "green"
+        },
+        {
+          "letter": "D",
+          "color": "green"
+        },
+        {
+          "letter": "L",
+          "color": "green"
+        },
+        {
+          "letter": "Y",
+          "color": "green"
+        }
+      ]
+    ],
+    "isOver": true,
+    "won": true
+  },
+  {
+    "id": 3,
+    "word": "trade",
+    "guesses": 6,
+    "guessedWords": [],
+    "isOver": false,
+    "won": false
+  },
+  {
+    "id": 4,
+    "word": "latte",
+    "guesses": 6,
+    "guessedWords": [],
+    "isOver": false,
+    "won": false
+  },
+  {
+    "id": 5,
+    "word": "snoop",
+    "guesses": 6,
+    "guessedWords": [],
+    "isOver": false,
+    "won": false
+  },
+  {
+    "id": 6,
+    "word": "hefty",
+    "guesses": 6,
+    "guessedWords": [],
+    "isOver": false,
+    "won": false
+  },
+  {
+    "id": 7,
+    "word": "antic",
+    "guesses": 6,
+    "guessedWords": [],
+    "isOver": false,
+    "won": false
+  },
+  {
+    "id": 8,
+    "word": "lemon",
+    "guesses": 6,
+    "guessedWords": [],
+    "isOver": false,
+    "won": false
+  },
+  {
+    "id": 9,
+    "word": "snide",
+    "guesses": 6,
+    "guessedWords": [],
+    "isOver": false,
+    "won": false
+  },
+  {
+    "id": 10,
+    "word": "stunt",
+    "guesses": 5,
+    "guessedWords": [
+      [
+        {
+          "letter": "F",
+          "color": "red"
+        },
+        {
+          "letter": "A",
+          "color": "red"
+        },
+        {
+          "letter": "S",
+          "color": "red"
+        },
+        {
+          "letter": "D",
+          "color": "red"
+        },
+        {
+          "letter": "A",
+          "color": "red"
+        }
+      ]
+    ],
+    "isOver": false,
+    "won": false
+  },
+  {
+    "id": 11,
+    "word": "loose",
+    "guesses": 6,
+    "guessedWords": [],
+    "isOver": false,
+    "won": false
+  },
+  {
+    "id": 12,
+    "word": "lyric",
+    "guesses": 6,
+    "guessedWords": [],
+    "isOver": false,
+    "won": false
+  },
+  {
+    "id": 13,
+    "word": "admin",
+    "guesses": 3,
+    "guessedWords": [
+      [
+        {
+          "letter": "A",
+          "color": "red"
+        },
+        {
+          "letter": "D",
+          "color": "red"
+        },
+        {
+          "letter": "A",
+          "color": "red"
+        },
+        {
+          "letter": "S",
+          "color": "red"
+        },
+        {
+          "letter": "A",
+          "color": "red"
+        }
+      ],
+      [
+        {
+          "letter": "A",
+          "color": "red"
+        },
+        {
+          "letter": "D",
+          "color": "red"
+        },
+        {
+          "letter": "A",
+          "color": "red"
+        },
+        {
+          "letter": "F",
+          "color": "red"
+        },
+        {
+          "letter": "A",
+          "color": "red"
+        }
+      ],
+      [
+        {
+          "letter": "A",
+          "color": "red"
+        },
+        {
+          "letter": "E",
+          "color": "red"
+        },
+        {
+          "letter": "I",
+          "color": "red"
+        },
+        {
+          "letter": "O",
+          "color": "red"
+        },
+        {
+          "letter": "U",
+          "color": "red"
+        }
+      ]
+    ],
+    "isOver": false,
+    "won": false
+  },
+  {
+    "id": 14,
+    "word": "peril",
+    "guesses": 6,
+    "guessedWords": [],
+    "isOver": false,
+    "won": false
+  },
+  {
+    "id": 15,
+    "word": "credo",
+    "guesses": 4,
+    "guessedWords": [
+      [
+        {
+          "letter": "A",
+          "color": "red"
+        },
+        {
+          "letter": "D",
+          "color": "red"
+        },
+        {
+          "letter": "A",
+          "color": "red"
+        },
+        {
+          "letter": "S",
+          "color": "red"
+        },
+        {
+          "letter": "F",
+          "color": "red"
+        }
+      ],
+      [
+        {
+          "letter": "A",
+          "color": "red"
+        },
+        {
+          "letter": "E",
+          "color": "red"
+        },
+        {
+          "letter": "I",
+          "color": "red"
+        },
+        {
+          "letter": "O",
+          "color": "red"
+        },
+        {
+          "letter": "U",
+          "color": "red"
+        }
+      ]
+    ],
+    "isOver": false,
+    "won": false
+  },
+  {
+    "id": 16,
+    "word": "nutty",
+    "guesses": 6,
+    "guessedWords": [],
+    "isOver": false,
+    "won": false
+  },
+  {
+    "id": 17,
+    "word": "print",
+    "guesses": 4,
+    "guessedWords": [
+      [
+        {
+          "letter": "A",
+          "color": "red"
+        },
+        {
+          "letter": "E",
+          "color": "red"
+        },
+        {
+          "letter": "I",
+          "color": "red"
+        },
+        {
+          "letter": "O",
+          "color": "red"
+        },
+        {
+          "letter": "U",
+          "color": "red"
+        }
+      ],
+      [
+        {
+          "letter": "A",
+          "color": "red"
+        },
+        {
+          "letter": "E",
+          "color": "red"
+        },
+        {
+          "letter": "I",
+          "color": "red"
+        },
+        {
+          "letter": "O",
+          "color": "red"
+        },
+        {
+          "letter": "U",
+          "color": "red"
+        }
+      ]
+    ],
+    "isOver": false,
+    "won": false
+  },
+  {
+    "id": 18,
+    "word": "dwelt",
+    "guesses": 3,
+    "guessedWords": [
+      [
+        {
+          "letter": "A",
+          "color": "red"
+        },
+        {
+          "letter": "E",
+          "color": "yellow"
+        },
+        {
+          "letter": "I",
+          "color": "red"
+        },
+        {
+          "letter": "O",
+          "color": "red"
+        },
+        {
+          "letter": "U",
+          "color": "red"
+        }
+      ],
+      [
+        {
+          "letter": "W",
+          "color": "yellow"
+        },
+        {
+          "letter": "E",
+          "color": "yellow"
+        },
+        {
+          "letter": "L",
+          "color": "yellow"
+        },
+        {
+          "letter": "L",
+          "color": "green"
+        },
+        {
+          "letter": "S",
+          "color": "red"
+        }
+      ],
+      [
+        {
+          "letter": "D",
+          "color": "green"
+        },
+        {
+          "letter": "W",
+          "color": "green"
+        },
+        {
+          "letter": "E",
+          "color": "green"
+        },
+        {
+          "letter": "L",
+          "color": "green"
+        },
+        {
+          "letter": "T",
+          "color": "green"
+        }
+      ]
+    ],
+    "isOver": true,
+    "won": true
+  }
 ]

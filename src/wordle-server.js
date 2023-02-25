@@ -23,8 +23,6 @@ const __dirname = url.fileURLToPath(new URL('.', import.meta.url))
 app.set('view engine', 'hbs')
 app.set('views', path.join(__dirname, 'web', 'site', 'views'))
 
-app.use((req, rsp) => {
-    rsp.status(404).render('notfound')
-})
+app.use((req, rsp) => rsp.status(404).render('notfound'))
 
 app.listen(port, () => console.log(`Server listening in http://localhost:${port}`))
