@@ -1,90 +1,24 @@
 [
   {
     "id": 0,
-    "word": "slink",
-    "guesses": 6,
-    "guessedWords": [],
+    "word": "weave",
+    "guesses": 5,
+    "guessedWords": [
+      "gamer"
+    ],
     "isOver": false,
     "won": false
   },
   {
     "id": 1,
-    "word": "spiel",
-    "guesses": 6,
-    "guessedWords": [],
-    "isOver": false,
-    "won": false
-  },
-  {
-    "id": 2,
-    "word": "proof",
-    "guesses": 5,
+    "word": "twang",
+    "guesses": 3,
     "guessedWords": [
-      "RRRRY"
+      "gamer",
+      "anger",
+      "twang"
     ],
-    "isOver": false,
-    "won": false
-  },
-  {
-    "id": 3,
-    "word": "bevel",
-    "guesses": 5,
-    "guessedWords": [
-      "RGYYR"
-    ],
-    "isOver": false,
-    "won": false
-  },
-  {
-    "id": 4,
-    "word": "crate",
-    "guesses": 5,
-    "guessedWords": [
-      "RYRRR"
-    ],
-    "isOver": false,
-    "won": false
-  },
-  {
-    "id": 5,
-    "word": "guise",
-    "guesses": 4,
-    "guessedWords": [
-      "RYRRR",
-      "GRRYR"
-    ],
-    "isOver": false,
-    "won": false
-  },
-  {
-    "id": 6,
-    "word": "pygmy",
-    "guesses": 5,
-    "guessedWords": [
-      [
-        {
-          "letter": "g",
-          "color": "#cfcf00"
-        },
-        {
-          "letter": "a",
-          "color": "##dcdcdc8f"
-        },
-        {
-          "letter": "m",
-          "color": "#cfcf00"
-        },
-        {
-          "letter": "e",
-          "color": "##dcdcdc8f"
-        },
-        {
-          "letter": "r",
-          "color": "##dcdcdc8f"
-        }
-      ]
-    ],
-    "isOver": false,
-    "won": false
+    "isOver": true,
+    "won": true
   }
 ]

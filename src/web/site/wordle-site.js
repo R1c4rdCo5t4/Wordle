@@ -5,6 +5,40 @@ import errors from '../../utils/errors.js'
 
 const __dirname = url.fileURLToPath(new URL('.', import.meta.url))
 
+
+const colors = {
+	green: '#338f28',
+	yellow: '#cfcf00',
+	gray: '##dcdcdc8f',
+}
+
+function wordHint(guessWord, correctWord) {
+
+	if (guessWord.length != correctWord.length) {
+		throw new Error("Words must be the same length.")
+	}
+	let pairs = []
+	for (let i = 0; i < guessWord.length; i++) {
+		const guess = guessWord[i].toLowerCase()
+		switch(true) {
+			case guess == correctWord[i]: pairs.push({ color: colors.green, letter: guess }); break
+			case correctWord.includes(guess): pairs.push({ color: colors.yellow, letter: guess }); break
+			default: pairs.push({ color: colors.gray, letter: guess }); break
+		}
+	}
+	return pairs
+}
+
+function getWords(game) {
+    const copy = { ...game }
+    copy.guessedWords = copy.guessedWords.map(word => wordHint(word, game.word))
+    
+    const obj = Array(5).fill({ color: 'transparent', letter: '_' }).map(x => ({ ...x }))
+    while (copy.guessedWords.length < 6) copy.guessedWords.push(obj)
+    console.log(copy.guessedWords)
+    return copy
+}
+
 export default function () {
 
     const baseURL = 'http://localhost:8080/api'
@@ -21,19 +55,12 @@ export default function () {
         
     }
 
-    function fillWords(game) {
-        const copy = { ...game }
-        const obj = Array(5).fill({ color: 'transparent', letter: '_' }).map(x => ({ ...x }))
-        while (copy.guessedWords.length < 6) copy.guessedWords.push(obj)
-        return copy
-    }
-
     async function getGame(req, rsp) {
         const result = await fetch(baseURL + '/play/' + req.params.gameId)
 
         if (result.ok) {
             const game = await result.json()
-            const copy = fillWords(game)
+            const copy = getWords(game)
             rsp.render('layout', copy)
         }
         else {
@@ -57,7 +84,7 @@ export default function () {
             })
             const json = await result.json()
             if (result.ok) {
-                const copy = fillWords(json)
+                const copy = getWords(json)
                 rsp.render('layout', copy)
             } else {
                 rsp.status(500).json(json)
