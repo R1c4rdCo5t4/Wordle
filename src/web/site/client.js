@@ -35,6 +35,7 @@ function writeWord(guesses, isOver) {
 
 			switch (event.key) {
 				case 'Enter':
+					if (word.length != 5 || word.includes('_')) break
 					guessWord.value = word
 					document.getElementById('onPlayButton').click()
 					break
