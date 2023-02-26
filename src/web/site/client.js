@@ -45,6 +45,8 @@ function writeWord(guesses, isOver) {
 					const prev = typingWord.children[word.length - 1]
 					if (prev.textContent == '_') prev.style.background = 'transparent'
 					else prev.textContent = '_'
+					
+					animDelay(prev, 500)
 
 					word = word.slice(0, word.length - 1)
 					break
@@ -54,6 +56,9 @@ function writeWord(guesses, isOver) {
 					word += '_'
 					tile.textContent = '_'
 					tile.style.background = '#dcdcdc8f'
+
+					animDelay(tile, 500)
+
 					break
 				
 				default:
@@ -61,8 +66,17 @@ function writeWord(guesses, isOver) {
 					if (letter.length == 1 && letter >= 'a' && letter <= 'z' && letter != ' ' && word.length < 5 && !isOver) {
 						word += letter
 						tile.textContent = letter
+						animDelay(tile, 500)
 					}
 			}
 		})
 	})
+}
+
+function animDelay(tile, delay){
+	tile.classList.add('scale-up-center');
+	setTimeout(
+		_=> tile.classList.remove('scale-up-center'),
+		delay
+	)
 }

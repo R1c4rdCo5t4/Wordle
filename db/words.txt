@@ -587,6 +587,7 @@ equip
 tough
 canoe
 chaos
+facts
 covet
 human
 udder
