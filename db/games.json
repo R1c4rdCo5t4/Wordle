@@ -1,3 +1,580 @@
 [
-
+  {
+    "id": 0,
+    "word": "macro",
+    "guesses": 3,
+    "guessedWords": [
+      "gmaer",
+      "gamer",
+      "gamer"
+    ],
+    "isOver": false,
+    "won": false,
+    "msg": "Word already guessed"
+  },
+  {
+    "id": 1,
+    "word": "flyer",
+    "guesses": 5,
+    "guessedWords": [
+      "aeiou"
+    ],
+    "isOver": false,
+    "won": false,
+    "msg": "Invalid word"
+  },
+  {
+    "id": 2,
+    "word": "sound",
+    "guesses": 1,
+    "guessedWords": [
+      "gamer",
+      "water",
+      "brick",
+      "house",
+      "sound"
+    ],
+    "isOver": true,
+    "won": true,
+    "msg": ""
+  },
+  {
+    "id": 3,
+    "word": "bloke",
+    "guesses": 0,
+    "guessedWords": [
+      "sound",
+      "gamer",
+      "water",
+      "flick",
+      "brick",
+      "slick"
+    ],
+    "isOver": true,
+    "won": false,
+    "msg": ""
+  },
+  {
+    "id": 4,
+    "word": "shear",
+    "guesses": 5,
+    "guessedWords": [
+      "gamer"
+    ],
+    "isOver": false,
+    "won": false,
+    "msg": "Word already guessed"
+  },
+  {
+    "id": 5,
+    "word": "acorn",
+    "guesses": 6,
+    "guessedWords": [],
+    "isOver": false,
+    "won": false,
+    "msg": ""
+  },
+  {
+    "id": 6,
+    "word": "lodge",
+    "guesses": 6,
+    "guessedWords": [],
+    "isOver": false,
+    "won": false,
+    "msg": ""
+  },
+  {
+    "id": 7,
+    "word": "goofy",
+    "guesses": 6,
+    "guessedWords": [],
+    "isOver": false,
+    "won": false,
+    "msg": ""
+  },
+  {
+    "id": 8,
+    "word": "creek",
+    "guesses": 5,
+    "guessedWords": [
+      "color"
+    ],
+    "isOver": false,
+    "won": false,
+    "msg": ""
+  },
+  {
+    "id": 9,
+    "word": "opine",
+    "guesses": 5,
+    "guessedWords": [
+      "hello"
+    ],
+    "isOver": false,
+    "won": false,
+    "msg": ""
+  },
+  {
+    "id": 10,
+    "word": "awoke",
+    "guesses": 5,
+    "guessedWords": [
+      "hello"
+    ],
+    "isOver": false,
+    "won": false,
+    "msg": ""
+  },
+  {
+    "id": 11,
+    "word": "curve",
+    "guesses": 6,
+    "guessedWords": [],
+    "isOver": false,
+    "won": false,
+    "msg": ""
+  },
+  {
+    "id": 12,
+    "word": "posse",
+    "guesses": 6,
+    "guessedWords": [],
+    "isOver": false,
+    "won": false,
+    "msg": ""
+  },
+  {
+    "id": 13,
+    "word": "merit",
+    "guesses": 6,
+    "guessedWords": [],
+    "isOver": false,
+    "won": false,
+    "msg": ""
+  },
+  {
+    "id": 14,
+    "word": "ruder",
+    "guesses": 4,
+    "guessedWords": [
+      "hello",
+      "gamer"
+    ],
+    "isOver": false,
+    "won": false,
+    "msg": ""
+  },
+  {
+    "id": 15,
+    "word": "horse",
+    "guesses": 5,
+    "guessedWords": [
+      "gamer"
+    ],
+    "isOver": false,
+    "won": false,
+    "msg": ""
+  },
+  {
+    "id": 16,
+    "word": "spiny",
+    "guesses": 5,
+    "guessedWords": [
+      "gamer"
+    ],
+    "isOver": false,
+    "won": false,
+    "msg": ""
+  },
+  {
+    "id": 17,
+    "word": "liver",
+    "guesses": 4,
+    "guessedWords": [
+      "gamer",
+      "lover"
+    ],
+    "isOver": false,
+    "won": false,
+    "msg": ""
+  },
+  {
+    "id": 18,
+    "word": "snail",
+    "guesses": 5,
+    "guessedWords": [
+      "gamer"
+    ],
+    "isOver": false,
+    "won": false,
+    "msg": "Invalid word"
+  },
+  {
+    "id": 19,
+    "word": "catch",
+    "guesses": 5,
+    "guessedWords": [
+      "gamer"
+    ],
+    "isOver": false,
+    "won": false,
+    "msg": ""
+  },
+  {
+    "id": 20,
+    "word": "force",
+    "guesses": 6,
+    "guessedWords": [],
+    "isOver": false,
+    "won": false,
+    "msg": ""
+  },
+  {
+    "id": 21,
+    "word": "small",
+    "guesses": 6,
+    "guessedWords": [],
+    "isOver": false,
+    "won": false,
+    "msg": ""
+  },
+  {
+    "id": 22,
+    "word": "puree",
+    "guesses": 6,
+    "guessedWords": [],
+    "isOver": false,
+    "won": false,
+    "msg": ""
+  },
+  {
+    "id": 23,
+    "word": "artsy",
+    "guesses": 6,
+    "guessedWords": [],
+    "isOver": false,
+    "won": false,
+    "msg": ""
+  },
+  {
+    "id": 24,
+    "word": "goner",
+    "guesses": 6,
+    "guessedWords": [],
+    "isOver": false,
+    "won": false,
+    "msg": ""
+  },
+  {
+    "id": 25,
+    "word": "stale",
+    "guesses": 6,
+    "guessedWords": [],
+    "isOver": false,
+    "won": false,
+    "msg": ""
+  },
+  {
+    "id": 26,
+    "word": "bylaw",
+    "guesses": 6,
+    "guessedWords": [],
+    "isOver": false,
+    "won": false,
+    "msg": ""
+  },
+  {
+    "id": 27,
+    "word": "bloat",
+    "guesses": 6,
+    "guessedWords": [],
+    "isOver": false,
+    "won": false,
+    "msg": ""
+  },
+  {
+    "id": 28,
+    "word": "quark",
+    "guesses": 6,
+    "guessedWords": [],
+    "isOver": false,
+    "won": false,
+    "msg": ""
+  },
+  {
+    "id": 29,
+    "word": "shrug",
+    "guesses": 5,
+    "guessedWords": [
+      "hello"
+    ],
+    "isOver": false,
+    "won": false,
+    "msg": "Invalid word"
+  },
+  {
+    "id": 30,
+    "word": "virus",
+    "guesses": 5,
+    "guessedWords": [
+      "gamer"
+    ],
+    "isOver": false,
+    "won": false,
+    "msg": ""
+  },
+  {
+    "id": 31,
+    "word": "digit",
+    "guesses": 4,
+    "guessedWords": [
+      "water",
+      "trunk"
+    ],
+    "isOver": false,
+    "won": false,
+    "msg": ""
+  },
+  {
+    "id": 32,
+    "word": "preen",
+    "guesses": 5,
+    "guessedWords": [
+      "gamer"
+    ],
+    "isOver": false,
+    "won": false,
+    "msg": "Invalid word"
+  },
+  {
+    "id": 33,
+    "word": "onset",
+    "guesses": 5,
+    "guessedWords": [
+      "gamer"
+    ],
+    "isOver": false,
+    "won": false,
+    "msg": ""
+  },
+  {
+    "id": 34,
+    "word": "tacky",
+    "guesses": 5,
+    "guessedWords": [
+      "gamer"
+    ],
+    "isOver": false,
+    "won": false,
+    "msg": ""
+  },
+  {
+    "id": 35,
+    "word": "lingo",
+    "guesses": 5,
+    "guessedWords": [
+      "gamer"
+    ],
+    "isOver": false,
+    "won": false,
+    "msg": ""
+  },
+  {
+    "id": 36,
+    "word": "steer",
+    "guesses": 3,
+    "guessedWords": [
+      "gamer",
+      "lover",
+      "liver"
+    ],
+    "isOver": false,
+    "won": false,
+    "msg": ""
+  },
+  {
+    "id": 37,
+    "word": "ivory",
+    "guesses": 5,
+    "guessedWords": [
+      "gamer"
+    ],
+    "isOver": false,
+    "won": false,
+    "msg": ""
+  },
+  {
+    "id": 38,
+    "word": "poker",
+    "guesses": 4,
+    "guessedWords": [
+      "gamer",
+      "liver"
+    ],
+    "isOver": false,
+    "won": false,
+    "msg": ""
+  },
+  {
+    "id": 39,
+    "word": "boxer",
+    "guesses": 5,
+    "guessedWords": [
+      "gamer"
+    ],
+    "isOver": false,
+    "won": false,
+    "msg": ""
+  },
+  {
+    "id": 40,
+    "word": "merit",
+    "guesses": 3,
+    "guessedWords": [
+      "gamer",
+      "merge",
+      "merit"
+    ],
+    "isOver": true,
+    "won": true,
+    "msg": ""
+  },
+  {
+    "id": 41,
+    "word": "sloth",
+    "guesses": 5,
+    "guessedWords": [
+      "gamer"
+    ],
+    "isOver": false,
+    "won": false,
+    "msg": ""
+  },
+  {
+    "id": 42,
+    "word": "chest",
+    "guesses": 5,
+    "guessedWords": [
+      "gamer"
+    ],
+    "isOver": false,
+    "won": false,
+    "msg": ""
+  },
+  {
+    "id": 43,
+    "word": "armor",
+    "guesses": 5,
+    "guessedWords": [
+      "gamer"
+    ],
+    "isOver": false,
+    "won": false,
+    "msg": ""
+  },
+  {
+    "id": 44,
+    "word": "quote",
+    "guesses": 2,
+    "guessedWords": [
+      "gamer",
+      "roast",
+      "block",
+      "quote"
+    ],
+    "isOver": true,
+    "won": true,
+    "msg": ""
+  },
+  {
+    "id": 45,
+    "word": "etude",
+    "guesses": 5,
+    "guessedWords": [
+      "water"
+    ],
+    "isOver": false,
+    "won": false,
+    "msg": "Invalid word"
+  },
+  {
+    "id": 46,
+    "word": "debar",
+    "guesses": 5,
+    "guessedWords": [
+      "water"
+    ],
+    "isOver": false,
+    "won": false,
+    "msg": ""
+  },
+  {
+    "id": 47,
+    "word": "tabby",
+    "guesses": 5,
+    "guessedWords": [
+      "water"
+    ],
+    "isOver": false,
+    "won": false,
+    "msg": ""
+  },
+  {
+    "id": 48,
+    "word": "brash",
+    "guesses": 5,
+    "guessedWords": [
+      "water"
+    ],
+    "isOver": false,
+    "won": false,
+    "msg": ""
+  },
+  {
+    "id": 49,
+    "word": "creed",
+    "guesses": 5,
+    "guessedWords": [
+      "water"
+    ],
+    "isOver": false,
+    "won": false,
+    "msg": ""
+  },
+  {
+    "id": 50,
+    "word": "excel",
+    "guesses": 5,
+    "guessedWords": [
+      "water"
+    ],
+    "isOver": false,
+    "won": false,
+    "msg": ""
+  },
+  {
+    "id": 51,
+    "word": "sugar",
+    "guesses": 4,
+    "guessedWords": [
+      "water",
+      "drain"
+    ],
+    "isOver": false,
+    "won": false,
+    "msg": ""
+  },
+  {
+    "id": 52,
+    "word": "start",
+    "guesses": 3,
+    "guessedWords": [
+      "water",
+      "train",
+      "start"
+    ],
+    "isOver": true,
+    "won": true,
+    "msg": ""
+  }
 ]

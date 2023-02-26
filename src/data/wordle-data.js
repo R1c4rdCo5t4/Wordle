@@ -14,6 +14,7 @@ async function getNewWord() {
 }
 
 
+
 async function playGame(guess, gameId) {
 
     const games = await loadAllGames()
@@ -23,7 +24,12 @@ async function playGame(guess, gameId) {
     if (!game || game.isOver) throw errors.INVALID_PARAMETER('gameId')
     if (!guess) throw errors.INVALID_PARAMETER('guess')
 
-    const result = words.includes(guess) ? await play(guess, game) : game
+    if (!words.includes(guess)) game.msg = "Invalid word"
+    else if (game.guessedWords.includes(guess)) game.msg = "Word already guessed"
+    else game.msg = ""
+
+
+    const result = game.msg ? game : await play(guess, game)
     await storeGame(result, games, gameId)
     return result
 }
@@ -38,7 +44,8 @@ async function newGame() {
         guesses: 6,
         guessedWords: [],
         isOver: false,
-        won: false
+        won: false,
+        msg: ""
     }
 
     await storeGame(game)

@@ -1,7 +1,5 @@
 
 
-
-
 export async function play(guess, game) {
 
 	if (game.isOver) return game

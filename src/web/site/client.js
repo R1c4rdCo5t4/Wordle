@@ -47,7 +47,8 @@ function writeWord(guesses, isOver) {
 					else prev.textContent = '_'
 					
 					animDelay(prev, 500)
-
+					prev.style.color = 'transparent'
+					prev.style.border = '2px solid rgba(211, 211, 211, 0.4)';
 					word = word.slice(0, word.length - 1)
 					break
 
@@ -55,7 +56,7 @@ function writeWord(guesses, isOver) {
 					if (word.length >= 5) break
 					word += '_'
 					tile.textContent = '_'
-					tile.style.background = '#dcdcdc8f'
+					tile.style.border = '2px solid rgba(211, 211, 211, 1)';
 
 					animDelay(tile, 500)
 
@@ -66,6 +67,7 @@ function writeWord(guesses, isOver) {
 					if (letter.length == 1 && letter >= 'a' && letter <= 'z' && letter != ' ' && word.length < 5 && !isOver) {
 						word += letter
 						tile.textContent = letter
+						tile.style.color = 'white'
 						animDelay(tile, 500)
 					}
 			}

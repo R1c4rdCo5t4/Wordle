@@ -20,17 +20,14 @@
           {{#each guessedWords}}
             <div class="guess-letters-container" id='word-{{@index}}'>
               {{#each this}}
-                <a class="letters-item" style="background-color:{{this.color}};">{{this.letter}}</a>
+                <a class="letters-item" style="background-color:{{color}}; {{#if hidden}} color:transparent {{/if}}">{{this.letter}}</a>
               {{/each}}
             </div>
           {{/each}}
       </div>
     </div>
-    <div class="word-stats">
-        {{!-- <div class="guesses">
-            Number of guesses: {{guesses}}
-        </div> --}}
-        
+    <div class="response">
+        <h1>{{msg}}</h1>
         {{#if isOver}}
             {{#if won}}
                 <h1>You won!</h1>
@@ -39,11 +36,12 @@
                 <h2>The word was: {{word}}</h2>
             {{/if}}
         {{/if}}
+       
         
     </div>
     <div class="word-guess-area">
       <span id="guessWord" value="" hidden></span>
-      <button id="onPlayButton" onclick="onPlay({{id}})"></button>
+      <button id="onPlayButton" onclick="onPlay({{id}})" hidden></button>
     </div>
   </div>
   <script>

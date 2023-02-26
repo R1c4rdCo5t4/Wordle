@@ -14,7 +14,8 @@ export default function (data) {
             rsp.json(game)
         }
         catch (e) {
-            rsp.status(500).json({ error: e.message })
+            console.log(e)
+            rsp.status(500).json(e)
         }
     }
 
@@ -24,7 +25,8 @@ export default function (data) {
             rsp.json(result)
         }
         catch (e) {
-            rsp.status(500).json({ error: e.message })
+            console.log(e)
+            rsp.status(500).json(e)
         }
     }
 
@@ -34,11 +36,12 @@ export default function (data) {
             if (!guess) {
                 throw errors.INVALID_PARAMETER('guess')
             }
-            result = await data.playGame(guess, req.params.gameId)
+            const result = await data.playGame(guess, req.params.gameId)
             rsp.json(result)
         }
         catch (e) {
-            rsp.status(500).json({ error: e.message })
+            console.log(e)
+            rsp.status(500).json(e)
         }
     }
 

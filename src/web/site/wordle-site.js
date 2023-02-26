@@ -17,26 +17,35 @@ function wordHint(guessWord, correctWord) {
 	if (guessWord.length != correctWord.length) {
 		throw new Error("Words must be the same length.")
 	}
-	let pairs = []
+    const pairs = []
+    const correct = []
+
+    // search for correct letters indices
 	for (let i = 0; i < guessWord.length; i++) {
-		const guess = guessWord[i].toLowerCase()
+        if (guessWord[i].toLowerCase() == correctWord[i]) {
+            correct.push(i)
+        }
+    }
+
+    // get color hints for each letter
+    for (let i = 0; i < guessWord.length; i++) {
+        const letter = guessWord[i].toLowerCase()
+        let color 
 		switch(true) {
-			case guess == correctWord[i]: pairs.push({ color: colors.green, letter: guess }); break
-			case correctWord.includes(guess): pairs.push({ color: colors.yellow, letter: guess }); break
-			default: pairs.push({ color: colors.gray, letter: guess }); break
-		}
-	}
+			case letter == correctWord[i]: color = colors.green; break
+			case correctWord.includes(letter) && !correct.includes(correctWord.indexOf(letter)): color = colors.yellow; break
+			default: color = colors.gray; break
+        }
+        pairs.push({ color: color, letter: letter })
+    }
 	return pairs
 }
 
-function getWords(game) {
-    const copy = { ...game }
-    copy.guessedWords = copy.guessedWords.map(word => wordHint(word, game.word))
-    
-    const obj = Array(5).fill({ color: 'transparent', letter: '_' }).map(x => ({ ...x }))
-    while (copy.guessedWords.length < 6) copy.guessedWords.push(obj)
-    console.log(copy.guessedWords)
-    return copy
+function getWords(guessedWords, correctWord) {
+    guessedWords = guessedWords.map(word => wordHint(word, correctWord))
+    const obj = Array(5).fill({ color: 'transparent', letter: '_', hidden:true }).map(x => ({ ...x }))
+    while (guessedWords.length < 6) guessedWords.push(obj)
+    return guessedWords
 }
 
 export default function () {
@@ -57,10 +66,11 @@ export default function () {
 
     async function getGame(req, rsp) {
         const result = await fetch(baseURL + '/play/' + req.params.gameId)
-
+        console.log
         if (result.ok) {
             const game = await result.json()
-            const copy = getWords(game)
+            const copy = { ...game }
+            copy.guessedWords = getWords(copy.guessedWords, copy.word)
             rsp.render('layout', copy)
         }
         else {
@@ -74,25 +84,26 @@ export default function () {
         if (!guess) {
             throw errors.INVALID_PARAMETER('guess')
         }
-        try {
-            const result = await fetch(baseURL + '/play/' + req.params.gameId, {
-                method: 'PUT',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({ guess:guess })
-            })
-            const json = await result.json()
-            if (result.ok) {
-                const copy = getWords(json)
-                rsp.render('layout', copy)
-            } else {
-                rsp.status(500).json(json)
-            }
+    
+        const result = await fetch(baseURL + '/play/' + req.params.gameId, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ guess:guess })
+        })
+
+        const json = await result.json()
+        if (result.ok) {
+            const copy = { ...json }
+            copy.guessedWords = getWords(copy.guessedWords, copy.word)
+            rsp.render('layout', copy)
+
+        } else {
+            rsp.status(500).json({ error: result.statusText })
         }
-        catch(err) {
-            rsp.status(500).json({ error: err.message })
-        }
+   
+     
     }
 
     const router = express.Router()
