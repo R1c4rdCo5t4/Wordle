@@ -39,6 +39,7 @@ a {
 .guess-letters-container {
     background-color: black;
     padding: .5rem;
+    user-select: none;
 }
 
 .letters-item {
