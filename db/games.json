@@ -20,5 +20,111 @@
     ],
     "isOver": true,
     "won": true
+  },
+  {
+    "id": 2,
+    "word": "handy",
+    "guesses": 6,
+    "guessedWords": [],
+    "isOver": false,
+    "won": false
+  },
+  {
+    "id": 3,
+    "word": "satyr",
+    "guesses": 5,
+    "guessedWords": [
+      "gamer"
+    ],
+    "isOver": false,
+    "won": false
+  },
+  {
+    "id": 4,
+    "word": "halve",
+    "guesses": 4,
+    "guessedWords": [
+      "hello",
+      "halve"
+    ],
+    "isOver": true,
+    "won": true
+  },
+  {
+    "id": 5,
+    "word": "vigil",
+    "guesses": 0,
+    "guessedWords": [
+      "hello",
+      "gamer",
+      "gamer",
+      "gamer",
+      "gamer",
+      "gamer"
+    ],
+    "isOver": true,
+    "won": false
+  },
+  {
+    "id": 6,
+    "word": "pulse",
+    "guesses": 6,
+    "guessedWords": [],
+    "isOver": false,
+    "won": false
+  },
+  {
+    "id": 7,
+    "word": "dried",
+    "guesses": 6,
+    "guessedWords": [],
+    "isOver": false,
+    "won": false
+  },
+  {
+    "id": 8,
+    "word": "shelf",
+    "guesses": 6,
+    "guessedWords": [],
+    "isOver": false,
+    "won": false
+  },
+  {
+    "id": 9,
+    "word": "spell",
+    "guesses": 0,
+    "guessedWords": [
+      "gamer",
+      "gamer",
+      "gamer",
+      "gamer",
+      "gamer",
+      "gamer"
+    ],
+    "isOver": true,
+    "won": false
+  },
+  {
+    "id": 10,
+    "word": "since",
+    "guesses": 6,
+    "guessedWords": [],
+    "isOver": false,
+    "won": false
+  },
+  {
+    "id": 11,
+    "word": "radio",
+    "guesses": 0,
+    "guessedWords": [
+      "gamer",
+      "gamer",
+      "gamer",
+      "gamer",
+      "gamer",
+      "gamer"
+    ],
+    "isOver": true,
+    "won": false
   }
 ]

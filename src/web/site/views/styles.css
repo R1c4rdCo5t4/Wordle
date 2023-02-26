@@ -1,16 +1,5 @@
 
 
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;1,200&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
-
-@font-face {
-    font-family: 'Material Icons';
-    font-style: normal;
-    font-weight: 400;
-    src: url(https://fonts.gstatic.com/s/materialicons/v139/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2) format('woff2');
-}
-
 .material-symbols-outlined {
     font-variation-settings:
     'FILL' 0,
@@ -21,7 +10,7 @@
 }
 
 * {
-    font-family: 'VT323', monospace;
+    font-family: monospace;
     background-color: black;
     color:white;
     margin: 0;
@@ -29,9 +18,14 @@
     font-size: larger;
 }
 
+a {
+    text-decoration: none;
+}
+
 .word-header h1{
     font-size: 6rem;
     letter-spacing: .8rem;
+    margin-top: 1rem;
 }
 
 .word-stats {
@@ -61,7 +55,7 @@
 }
 
 .word-container :first-child {
-    margin-top: 6vh;
+    margin-top: 2vh;
 }
 
 .word-container :last-child {
