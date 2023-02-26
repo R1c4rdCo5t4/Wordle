@@ -14,16 +14,14 @@ function wordHint(guessWord, correctWord) {
 	}
 	let pairs = []
 	for (let i = 0; i < guessWord.length; i++) {
-		const guessWLower = guessWord[i].toLowerCase()
-		const guessWUpper = guessWord[i].toUpperCase() 
+		const guess = guessWord[i].toLowerCase()
 		let color
 		switch(true) {
-			case guessWLower == correctWord[i]: color = colors.green; break
-			case correctWord.includes(guessWLower): color = colors.yellow; break
+			case guess == correctWord[i]: color = colors.green; break
+			case correctWord.includes(guess): color = colors.yellow; break
 			default: color = colors.gray
 		}
-		pairs.push({letter: guessWUpper, color: color})
-
+		pairs.push({letter: guess, color: color})
 	}
 	return pairs
 }

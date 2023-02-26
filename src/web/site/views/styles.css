@@ -48,13 +48,16 @@
 }
 
 .letters-item {
-    background-color: #6565658f;
+    background-color: transparent;
     padding-left: 2vh;
     padding-right: 2vh;
     border-radius: 2px;
     font-size: 8vh;
     margin-left: -0.5vh;
     margin-right: -0.5vh;
+    border: 2px solid rgba(211, 211, 211, 0.4);
+    user-select: none;
+    text-transform: uppercase;
 }
 
 .word-container :first-child {

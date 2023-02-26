@@ -23,7 +23,7 @@ export default function () {
 
     function fillWords(game) {
         const copy = { ...game }
-        const obj = Array(5).fill({ color: '#6565658f', letter: '_' }).map(x => ({ ...x }))
+        const obj = Array(5).fill({ color: 'transparent', letter: '_' }).map(x => ({ ...x }))
         while (copy.guessedWords.length < 6) copy.guessedWords.push(obj)
         return copy
     }

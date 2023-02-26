@@ -43,13 +43,14 @@ function writeWord(guesses, isOver) {
 					if (word.length <= 0) break
 					
 					const prev = typingWord.children[word.length - 1]
-					if (prev.textContent == '_') prev.style.background = '#6565658f'
+					if (prev.textContent == '_') prev.style.background = 'transparent'
 					else prev.textContent = '_'
 
 					word = word.slice(0, word.length - 1)
 					break
 
 				case ' ':
+					if (word.length >= 5) break
 					word += '_'
 					tile.textContent = '_'
 					tile.style.background = '#dcdcdc8f'
@@ -59,7 +60,7 @@ function writeWord(guesses, isOver) {
 					const letter = event.key.toLowerCase()
 					if (letter.length == 1 && letter >= 'a' && letter <= 'z' && letter != ' ' && word.length < 5 && !isOver) {
 						word += letter
-						tile.textContent = letter.toUpperCase()
+						tile.textContent = letter
 					}
 			}
 		})
