@@ -18,6 +18,9 @@
 
 a {
     text-decoration: none;
+}
+
+span {
     display: inline-block;
 }
 
@@ -25,6 +28,10 @@ h1 {
     font-size: 5rem;
     letter-spacing: .8rem;
     margin-top: 1rem;
+}
+
+.header {
+    display: inline-block;
 }
 
 .response {
@@ -63,6 +70,14 @@ h1 {
     border: 2px solid rgba(211, 211, 211, 0.4);
     user-select: none;
     text-transform: uppercase;
+}
+
+.game :first-child {
+    margin-top: 10vh;
+}
+
+.game :last-child {
+    margin-bottom: 1vh;
 }
 
 .scale-up-center {
