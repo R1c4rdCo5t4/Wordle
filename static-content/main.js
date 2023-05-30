@@ -56,19 +56,17 @@ function getTileColor(index, guessWord, correctWord) {
 async function play(guess, game) {
     const allWords = await getAllWords()
     const attempt = game.guesses.length
-    const gameDiv = document.querySelector(".game")
     const word = document.getElementById(`word-${attempt}`)
     const feedback = document.getElementById(`feedback`)
 
     if (game.guesses === totalGuesses || !allWords.includes(guess)) return
-
     typingWord = ""
     game.guesses.push(guess)
 
     if (guess === game.word) {
         ([...word.children]).forEach(letter => letter.style["background-color"] = colors.green)
         game.isOver = true
-        feedback.textContent = "You win!"
+        feedback.textContent = "You won!"
         return
     }
 
