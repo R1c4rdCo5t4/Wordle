@@ -90,9 +90,3 @@ export function label(attrs, text) {
 export function textarea(attrs) {
     return createElement("textarea", attrs)
 }
-
-export function icon(...icons) {
-    const element = createElement("span")
-    element.classList.add("icon", "fa", ...icons.map(c => "fa-" + c))
-    return element
-}
