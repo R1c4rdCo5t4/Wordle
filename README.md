@@ -1,5 +1,5 @@
-# Wordle Game <img src="https://skillicons.dev/icons?i=js,nodejs,express,html,css"/>
-Wordle web app game made with HTML, CSS & JavaScript
+# Wordle Game <img src="https://skillicons.dev/icons?i=html,css,js,nodejs,express"/>
+Wordle web app game made with HTML, CSS & JavaScript in a Single Page Application
 
 <img src="./preview.png">
 
